@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kempt India Ecosolutions - Project Gallery</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --kempt-green: #2e7d32;
+            --kempt-dark: #1b5e20;
+            --kempt-light: #e8f5e9;
+        }
+
+        body {
+            background-color: #f4f6f5;
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+        }
+
+        h1 {
+            color: var(--kempt-dark);
+            font-weight: 700;
+        }
+
+        /* Filter Buttons */
+        .btn-outline-success {
+            color: var(--kempt-green);
+            border-color: var(--kempt-green);
+        }
+
+        .btn-outline-success:hover,
+        .btn-check:checked + .btn-outline-success {
+            background-color: var(--kempt-green);
+            color: #fff;
+            border-color: var(--kempt-green);
+        }
+
+        /* The Grid Item */
+        .grid-item {
+            margin-bottom: 24px; /* Space bottom */
+            padding: 0 12px; /* Space between columns */
+            float: left; /* Essential for Isotope */
+        }
+
+        /* The Card/Image Container */
+        .gallery-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(46, 125, 50, 0.15);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: auto; /* Maintains aspect ratio */
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Overlay text for professional look */
+        .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            padding: 20px 15px 15px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-card:hover .card-overlay {
+            opacity: 1;
+        }
+
+        .overlay-text {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    
+    <div class="text-center mb-5">
+        <h1 class="display-5">Project Portfolio</h1>
+        <p class="text-muted lead">Sustainable Waste Management & Recycling Initiatives</p>
+    </div>
+
+    <div class="row justify-content-center mb-5">
+        <div class="col-auto">
+            <div class="button-group filters-button-group d-flex flex-wrap gap-2 justify-content-center">
+                <button class="btn btn-outline-success active" data-filter="*">All Projects</button>
+                <button class="btn btn-outline-success" data-filter=".waste-mgmt">Waste Management</button>
+                <button class="btn btn-outline-success" data-filter=".recycling">Recycling</button>
+                <button class="btn btn-outline-success" data-filter=".sustainability">Sustainability</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid row mx-0">
+        
+        <div class="col-6 col-md-4 col-lg-3 grid-sizer"></div>
+
+        <div class="col-6 col-md-4 col-lg-3 grid-item recycling">
+            <div class="gallery-card">
+                <a href="https://placehold.co/600x900/2e7d32/fff?text=Metal+Scrap+Processing" data-fancybox="gallery" data-caption="Metal Scrap Processing & Sorting Facility">
+                    <img src="https://placehold.co/600x900/2e7d32/fff?text=Metal+Scrap+Processing" alt="Metal Recycling">
+                    <div class="card-overlay">
+                        <div class="overlay-text">Metal Processing</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 grid-item waste-mgmt">
+            <div class="gallery-card">
+                <a href="https://placehold.co/600x400/558b2f/fff?text=Urban+Waste+Collection" data-fancybox="gallery" data-caption="Urban Waste Collection Fleet">
+                    <img src="https://placehold.co/600x400/558b2f/fff?text=Urban+Waste+Collection" alt="Waste Collection">
+                    <div class="card-overlay">
+                        <div class="overlay-text">Urban Collection</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 grid-item sustainability">
+            <div class="gallery-card">
+                <a href="https://placehold.co/600x600/1b5e20/fff?text=Eco+Consulting" data-fancybox="gallery" data-caption="Corporate Eco-Consulting Session">
+                    <img src="https://placehold.co/600x600/1b5e20/fff?text=Eco+Consulting" alt="Consulting">
+                    <div class="card-overlay">
+                        <div class="overlay-text">Eco Consulting</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 grid-item waste-mgmt">
+            <div class="gallery-card">
+                <a href="https://placehold.co/600x800/43a047/fff?text=Industrial+Cleanup" data-fancybox="gallery" data-caption="Industrial Site Cleanup Project">
+                    <img src="https://placehold.co/600x800/43a047/fff?text=Industrial+Cleanup" alt="Industrial Cleanup">
+                    <div class="card-overlay">
+                        <div class="overlay-text">Industrial Cleanup</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 grid-item recycling">
+            <div class="gallery-card">
+                <a href="https://placehold.co/600x500/388e3c/fff?text=Plastic+Segregation" data-fancybox="gallery" data-caption="Plastic Waste Segregation Unit">
+                    <img src="https://placehold.co/600x500/388e3c/fff?text=Plastic+Segregation" alt="Plastic Recycling">
+                    <div class="card-overlay">
+                        <div class="overlay-text">Plastic Segregation</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 grid-item sustainability">
+            <div class="gallery-card">
+                <a href="https://placehold.co/600x1000/1b5e20/fff?text=Green+Park+Initiative" data-fancybox="gallery" data-caption="Community Green Park Restoration">
+                    <img src="https://placehold.co/600x1000/1b5e20/fff?text=Green+Park+Initiative" alt="Green Initiative">
+                    <div class="card-overlay">
+                        <div class="overlay-text">Green Park Restoration</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="col-6 col-md-4 col-lg-3 grid-item recycling">
+            <div class="gallery-card">
+                <a href="https://placehold.co/600x350/2e7d32/fff?text=E-Waste+Mgmt" data-fancybox="gallery" data-caption="Electronic Waste Secure Disposal">
+                    <img src="https://placehold.co/600x350/2e7d32/fff?text=E-Waste+Mgmt" alt="E-Waste">
+                    <div class="card-overlay">
+                        <div class="overlay-text">E-Waste Disposal</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+         <div class="col-6 col-md-4 col-lg-3 grid-item waste-mgmt">
+            <div class="gallery-card">
+                <a href="https://placehold.co/600x600/558b2f/fff?text=Bio-Medical+Waste" data-fancybox="gallery" data-caption="Bio-Medical Waste Handling">
+                    <img src="https://placehold.co/600x600/558b2f/fff?text=Bio-Medical+Waste" alt="Bio-Medical">
+                    <div class="card-overlay">
+                        <div class="overlay-text">Bio-Medical Safety</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+<script>
+    $(document).ready(function() {
+        
+        // --- 1. Initialize Isotope with Masonry ---
+        // 'imagesLoaded' waits for all images to download before arranging them
+        var $grid = $('.grid').imagesLoaded( function() {
+            $grid.isotope({
+                itemSelector: '.grid-item',
+                percentPosition: true,
+                layoutMode: 'masonry', 
+                masonry: {
+                    columnWidth: '.grid-sizer'
+                }
+            });
+        });
+
+        // --- 2. Filter Logic ---
+        $('.filters-button-group').on( 'click', 'button', function() {
+            var filterValue = $(this).attr('data-filter');
+            $grid.isotope({ filter: filterValue });
+        });
+
+        // --- 3. Button Active State ---
+        $('.filters-button-group').each( function( i, buttonGroup ) {
+            var $buttonGroup = $( buttonGroup );
+            $buttonGroup.on( 'click', 'button', function() {
+                $buttonGroup.find('.active').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+
+        // --- 4. Initialize Fancybox ---
+        Fancybox.bind("[data-fancybox]", {
+            // Animation effect for opening the gallery
+            hideScrollbar: false,
+        });
+
+    });
+</script>
+
+</body>
+</html>

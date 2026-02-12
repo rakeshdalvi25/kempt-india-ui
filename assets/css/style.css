@@ -5475,11 +5475,11 @@ a.footer-btn.bordered-btn {
 /* 29. Breadcrumb CSS  
 ---------------------*/
 .breadcrumb-area {
-  background-image: url(../img/breadcrumb/bread-bg.jpg);
+  background-image: url(../img/cta-bg.jpg);
 }
 
 .breadcrumb-area {
-  height: 400px;
+  height: 180px;
   background-size: cover;
   background-position: center bottom;
   background-color: #ddd;
